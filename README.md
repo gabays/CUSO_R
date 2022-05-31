@@ -15,6 +15,9 @@ Les cours ont lieu
 ---
 ## Installation
 
+Vous devez télécharger ce dépôt. Pour cela, regardez en haut à droite: il y a une bouton vert appelé `code`. Cliquez dessus et choisissez `Download zip`. Vous avez désormais tous les cours sur votre ordinateur après avoir dézippé le document.
+
+
 Vous avez besoin du langage _R_
 1. Pour Windows (😡): https://cran.r-project.org/bin/windows/base
 2. Pour Mac: https://cran.r-project.org/bin/macosx. Pensez à installer `XQuartz` pour pouvoir faire fonctionner le package `stylo`.
