@@ -244,9 +244,8 @@ uneListe
 On peut récupérer une élément dans une liste
 
 ```{r}
-uneListe[[3]]
-uneListe[[4]][[2]]
-
+uneListe[[3]] #savoir s'il existe
+uneListe[[4]][[2]] #récupérer la valeur
 ```
 
 #### 2.3.3 Data frames
@@ -266,7 +265,25 @@ On peut récupérer les informations dans le data frame
 df["Patrick","poids"]
 ```
 
-Il est possible de "découper" des morceaux du tableau
+Sélectionner le premier rang:
+
+```{r}
+df[1,]
+```
+
+Sélectionner la première colonne:
+
+```{r}
+df[,1]
+```
+
+Il est possible de "découper" des morceaux du tableau:
+
+```{r}
+df[1:3,c(2,3)]
+```
+
+Je peux appeler les vecteurs par leur nom:
 
 ```{r}
 df[1:3,c("poids","sexe")]
@@ -326,7 +343,7 @@ Ces informations nous permettent de décrire notre échantillon
 hist(df$poids,main="Poids",col="red",xlab="Poids",ylab="Fréquence")
 ```
 
-On peut vérifier si la distribution est normale avec `qqnorm`. Pour qu'elle le soit, il faut que les points (qui dessinent une fonction de répartition _Φ_ (_phi_) montent constamment, comme dans ces exemples:
+On peut vérifier si la distribution est normale avec `qqnorm`. Pour qu'elle le soit, il faut que les points (qui dessinent une fonction de répartition _Φ_, _phi_) montent constamment, comme dans ces exemples:
 
 ![center 100%](images/2000px-Normal_Distribution_CDF.png)
 
@@ -338,7 +355,7 @@ Si la répartition de nos données suivent une loi normale, nous devons obtenir 
 
 ![center 100%](images/2000px-Normal_Distribution_PDF.png)
 
-Comme la distribution est normale, on peut superposer à notre un histogramme la courbe de densité qui lui est associée, mais aussi la moyenne et les _σ_
+Comme la distribution est normale, on peut superposer à notre un histogramme la courbe de densité qui lui est associée, mais aussi la moyenne et les _σ_. La fonction `dnorm()` qui calcule la densité de probabilité à _x_ d'une distribution normale avec une moyenne _μ_ et un écart-type _σ_. `abline()` permet de déssiner une ligne verticale et `curve()` une courbe. Rappelons ici que nous avons défini `mn` (la moyenne), `std` (l'écart type) quelques lignes plus haut: je peux donc les passer valeur des différents paramètres des fonctions que j'utilise. 
 
 ```{r}
 #on affiche la densité plutôt que la fréquence en ordonnée avec le paramètre `freq=F`
@@ -352,7 +369,8 @@ abline(v = mn-std, col = "grey", lwd = 2,lty=2)
 abline(v = mn+std, col = "grey", lwd = 2,lty=2)
 ```
 
-On peut aussi proposer d'autres visualisation, sous forme de "boîte à moustache" par exemple
+On peut aussi proposer d'autres visualisation, sous forme de "boîte à moustache" par exemple:
+
 ```{r}
 boxplot(df$poids,main="Poids")
 #une boîte à moustache de la taille et du poids (assez inutile d'un point de vue graphique…)
