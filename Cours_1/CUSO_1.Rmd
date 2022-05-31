@@ -295,6 +295,15 @@ On peut accéder à des colonnes en ajoutant `$` suivi du nom de la colonne
 df$taille
 ```
 
+Pour récupérer des rangs en les choisissant:
+
+```{r}
+subset_df <- rbind(df[1:2, ], df[5, ])
+subset_df
+```
+
+
+
 ## 3 Des premières statistiques
 
 ### 3.1 Définitions: médiane, moyenne, écart type
