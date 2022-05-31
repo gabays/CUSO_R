@@ -1,7 +1,7 @@
 ---
-title: "2. Découvrir l'écosystème `R`"
+title: "1. Découvrir l'écosystème `R`"
 author: "Simon Gabay"
-date: "05/10/2021"
+date: "31/05/2022"
 output:
   html_document:
     highlight: pygments
