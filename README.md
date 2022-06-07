@@ -9,8 +9,8 @@ Les cours ont lieu
 
 ## Cours
 
-1. Introduction à R
-2. À définir
+1. [Introduction à R](https://github.com/gabays/CUSO_R/tree/master/Cours_1)
+2. [Analyse de réseau](https://github.com/gabays/CUSO_R/tree/master/Cours_2)
 
 ---
 ## Installation
