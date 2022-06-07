@@ -335,7 +335,7 @@ Fruchterman, Thomas M. J.; Reingold, Edward M. (1991), "Graph Drawing by Force-D
 
 Plus d'informations [ici](https://github.com/gephi/gephi/wiki/Fruchterman-Reingold)
 
-Le algorithme est assez comppliqué, et le temprs de calcul conséquent. On l'utilise peu avec des grandes bases de données (plus de 10 000 nœuds).
+Le algorithme est assez compliqué, et le temps de calcul conséquent. On l'utilise peu avec des grandes bases de données (plus de 10 000 nœuds).
 
 ```{r}
 layout_fr<-layout_with_fr(data_simplified)
@@ -642,10 +642,15 @@ rgl.viewpoint(theta=0, phi=0)
 rgl.snapshot(paste(dirfolder,"monGRaph3d.png",sep=""), fmt="png", top=TRUE)
 
 #Sauvegarde en html
-rglfolder=writeWebGL(dir = paste(dirfolder,"first_net3d",sep=""), width=900)
+#rglfolder=writeWebGL(dir = paste(dirfolder,"first_net3d",sep=""), width=900)
+#J'ouvre le résultat dans le navigateur
+#browseURL(rglfolder)
+
+# Sauvegarde en html
+htmlwidgets::saveWidget(rglfolder, "./graph.html")
 
 #J'ouvre le résultat dans le navigateur
-browseURL(rglfolder)
+browseURL("./graph.html")
 ```
 
 Je peux produire une visualisation interactive directement dans `R`. Je prépare les données
@@ -742,7 +747,8 @@ data_3d_vis_plot
 
 # 5. Sauvegardes
 
-On sauvegarde le résultat
+On sauvegarde le résultat:
+
 ```{r, include=TRUE}
 write_graph(data, "edgelist.txt", format="edgelist")
 svg(file="monGraph.svg")
@@ -752,6 +758,8 @@ dev.off()
 png(file="monGraph.png")
 plot(data)
 dev.off()
+
+visSave(data_3d_vis_plot,  file = "network.html", selfcontained = TRUE, background = "white")
 ```
 
 ![100% center](monGraph.png)
