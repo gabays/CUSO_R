@@ -1,7 +1,7 @@
 ---
 title: "Analyse de réseau avec `R`"
 author: "Simon Gabay"
-date: "14/10/2021"
+date: "07/07/2022"
 output:
   html_document:
     highlight: pygments
@@ -647,10 +647,13 @@ rgl.snapshot(paste(dirfolder,"monGRaph3d.png",sep=""), fmt="png", top=TRUE)
 #browseURL(rglfolder)
 
 # Sauvegarde en html
+rglfolder <- rglwidget(width=1000, height=1000)
 htmlwidgets::saveWidget(rglfolder, "./graph.html")
 
 #J'ouvre le résultat dans le navigateur
 browseURL("./graph.html")
+
+rgl.close()
 ```
 
 Je peux produire une visualisation interactive directement dans `R`. Je prépare les données
@@ -750,7 +753,7 @@ data_3d_vis_plot
 On sauvegarde le résultat:
 
 ```{r, include=TRUE}
-write_graph(data, "edgelist.txt", format="edgelist")
+write_graph(data, "data/edgelist.txt", format="edgelist")
 svg(file="monGraph.svg")
 plot(data)
 dev.off()

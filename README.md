@@ -20,7 +20,7 @@ Vous devez télécharger ce dépôt. Pour cela, regardez en haut à droite: il y
 
 Vous avez besoin du langage _R_
 1. Pour Windows (😡): https://cran.r-project.org/bin/windows/base
-2. Pour Mac: https://cran.r-project.org/bin/macosx. Pensez à installer `XQuartz` pour pouvoir faire fonctionner le package `stylo`.
+2. Pour Mac: https://cran.r-project.org/bin/macosx. Pensez à installer `XQuartz` [lien](https://www.xquartz.org).
 3. Pour linux: `$ sudo apt install r-base-core`
 
 Il faut ensuite télécharger _RStudio_: https://rstudio.com/products/rstudio/download/#download
