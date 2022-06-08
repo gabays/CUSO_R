@@ -473,6 +473,19 @@ Nous avons vu jusqu'à présent une série de fonctions: `summary()`, `mean()`�
 library(rtweet)
 ```
 
+Pour savoir si un package est installé, je peux explorer la liste `installed.packages()` ou bien directement demander si un package se trouve dans cette liste:
+
+```{r}
+View(installed.packages())
+"rtweet" %in% rownames(installed.packages())
+```
+
+On peut aussi effacer une librairie:
+
+```{r}
+remove.packages("rtweet")
+```
+
 Il est possible de conditionner l'installation d'une bibliothèque à son absence sur la machine:
 
 ```{r}
