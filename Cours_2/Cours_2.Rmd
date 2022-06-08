@@ -26,6 +26,8 @@ setwd("~/GitHub/UNIGE/CUSO_R/Cours_2")
 #load("Cours_2.RData")
 ```
 
+Pensez à lire ce que vous dit la console! Vous allez probablement devoir répondre "Oui" (ou "Yes") pour certaines installations
+
 ```{r, echo=TRUE, results='hide', message=FALSE, warning=FALSE}
 if(!require("devtools")){
   install.packages("devtools")

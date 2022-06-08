@@ -460,6 +460,8 @@ help(hist)
 
 ## 5 Les packages
 
+**Pour cet exemple, nous allsons utiliser le pacakage rtweet, qui permet de télécharger des tweets, mais pour cela vous devez avoir un compte twitte**
+
 ### 5.1 Principe et installation
 
 Nous avons vu jusqu'à présent une série de fonctions: `summary()`, `mean()`… Elles sont fournies avec `R`, mais il est possible d'en inventer soit même, et donc de les mettre à disposition des autres. Pour cela on les met dans un package, disponible en ligne, et que l'on peut télécharger avec la fonction `install.packages()` et on l'active avec `library()`.
