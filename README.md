@@ -12,6 +12,7 @@ Les cours ont lieu
 1. [Introduction à R](https://github.com/gabays/CUSO_R/tree/master/Cours_1)
 2. [Analyse de réseau](https://github.com/gabays/CUSO_R/tree/master/Cours_2)
 3. [Topic modeling](https://github.com/gabays/CUSO_R/tree/master/Cours_3)
+4. [Stylometry](https://github.com/gabays/CUSO_R/tree/master/Cours_4)
 
 ---
 ## Installation
